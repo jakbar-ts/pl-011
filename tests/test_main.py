@@ -1,5 +1,5 @@
 from unittest import TestCase
-from src.main import file_sum
+from src.zadanie1 import file_sum
 
 class TestFileSum(TestCase):
     def test_positive_numbers(self):
