@@ -16,10 +16,8 @@ class TestSerializeStudent(TestCase):
 
         serialized_student = serialize_student(student_data)
 
-        self.assertIsInstance(serialized_student, str)
-
-        self.assertIn('"id": "652"', serialized_student)
-        self.assertIn('"first_name": "John"', serialized_student)
-        self.assertIn('"last_name": "Doe"', serialized_student)
-        self.assertIn('"email": "john.doe@example.com"', serialized_student)
-        self.assertIn('"date_of_birth": "2000-01-01"', serialized_student)
+        self.assertEqual(serialized_student["id"], 652)
+        self.assertIn(serialized_student["first_name"], "John")
+        self.assertIn(serialized_student["last_name"], "Doe")
+        self.assertIn(serialized_student["email"], "john.doe@example.com")
+        self.assertIn(serialized_student["date_of_birth"], "2000-01-01")
