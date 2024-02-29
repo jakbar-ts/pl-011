@@ -9,5 +9,5 @@ class StudentSchema(Schema):
 
 def serialize_student(student_data):
     schema = StudentSchema()
-    result = schema.dump(student_data)
+    result = schema.dumps(student_data)
     return result
